@@ -1,0 +1,110 @@
+@import '~antd/dist/antd.css';
+
+html, body {
+  height: 100%;
+}
+
+.App {
+  text-align: center;
+}
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+.App-header {
+  height: 150px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+.App-title {
+  color: white;
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.App-subtitle {
+  color: white;
+  font-size: .8em;
+}
+.App-version {
+  color: white;
+  font-size: .8em;
+  margin-bottom: .5em;
+}
+.ant-layout-header {
+  height: 48px;
+}
+.App-intro {
+  font-size: large;
+}
+.ant-table table {
+  background: white;
+}
+.ant-table-thead > tr > th{
+  background: #c7e4fb;
+}
+.btn-link {
+  border: none;
+  color: #1890ff;
+}
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.table-action-bar{
+  margin-bottom: 10px;
+}
+
+.table-action-bar h2 {
+  display: inline-block;
+}
+.table-action-bar button {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  float: right;
+}
+
+.hidden { display:none; }
+
+.bg-login{
+  background-color: #231e16;
+  height: 100vh;
+  min-height: 100%;
+  padding-top: 10%;
+  padding-left: 30%;
+  padding-bottom: 10%;
+  padding-right: 30%;
+  text-align: center;
+}
+
+.login-form-button {
+  width: 100%;
+}
+
+.btn-separator{
+  margin-left: 10px;
+}
+
+.radio-margin{
+  margin-bottom: 30px;
+}
+
+.desc-item-div{
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 7px;
+}
+
+.desc-item-p{
+  margin-right: 8px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.ant-layout-sider-trigger {
+  background: #c7e4fb;
+}

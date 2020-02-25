@@ -1,0 +1,35 @@
+{
+  "name": "courier-web-app",
+  "version": "1.1.10",
+  "private": true,
+  "dependencies": {
+    "accounting": "^0.4.1",
+    "antd": "^3.16.2",
+    "aws-amplify": "^1.1.26",
+    "axios": "^0.18.0",
+    "history": "^4.7.2",
+    "immutability-helper": "^3.0.0",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.23",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-highlight-words": "^0.16.0",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "2.1.8"
+  },
+  "scripts": {
+    "start": "REACT_APP_VERSION=$npm_package_version PORT=4000 react-scripts start",
+    "build": "REACT_APP_VERSION=$npm_package_version react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

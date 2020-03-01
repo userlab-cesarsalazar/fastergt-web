@@ -2,7 +2,7 @@ import api from '../../config/api'
 import { stage } from '../../config/credentials'
 
 const url = stage.baseUrlUsers;
-const baseUrl = stage.baseUrl;
+const searchUrl = stage.searchUrl;
 
 const list = (params) => api.get(url+'?'+params);
 const getProfile = () => api.get(url+'/profile');
@@ -13,7 +13,7 @@ const getUser = (user_id) => api.get(url+'/'+user_id);
 
 const getByClientId = client_id => api.get(url+'?client_id='+client_id);
 
-const getByName = name => api.get(`${baseUrl}/search?str=${name}`)
+const getByName = name => api.get(`${searchUrl}search?str=${name}`)
 
 export default {
   list,

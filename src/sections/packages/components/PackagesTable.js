@@ -26,6 +26,7 @@ class PackagesTable extends React.Component {
   }
 
   getColumns = ()=>{
+    
     let columns = [
       { title: '#', dataIndex: 'package_id', key: 'package_id' },
       { title: 'Codigo', dataIndex: 'client_id', key: 'client_id' },
@@ -43,8 +44,9 @@ class PackagesTable extends React.Component {
           <div>
               <Button style={{marginLeft:'-20px'}} type='default' icon='edit' onClick={e => { this.onEdit(record.key, e); }}/>
               <Divider type={'vertical'} />
-            
-            <Button type='primary' icon='download' onClick={e => { this.onDownload(record, e); }} loading={this.state.loading} disabled={ record.status === 'Entregado' || record.status ===  'Entregado.' ? true: false}/>
+            {this.props.profile === 'admin' &&
+              <Button type='primary' icon='download' onClick={e => { this.onDownload(record, e); }} loading={this.state.loading} disabled={ record.status === 'Entregado' || record.status ===  'Entregado.' ? true: false}/>
+            }
           </div>
           
         ),

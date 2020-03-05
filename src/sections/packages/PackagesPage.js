@@ -39,7 +39,7 @@ class PackagesPage extends Component {
       tracking: '',
       client: undefined,
       type:'tracking',
-      phone:''
+      phone:'',
     }
     
     this.onSearch = this.onSearch.bind(this)
@@ -111,7 +111,7 @@ class PackagesPage extends Component {
     if(this.state.phone && this.state.phone !== ''){
       params = `type=phone&id=${this.state.phone}`
     }
-    console.log('her',params)
+    
     this.setState({loading : true})
     PackagesSrc.getByFilter(params)
       .then( response => this.setState({ packages : response, loading: false }))
@@ -250,6 +250,7 @@ class PackagesPage extends Component {
           loading={loading}
           packages={packages}
           download ={ this.handleOnDownload}
+          profile={ this.state.role }
         />
       </div>
     );

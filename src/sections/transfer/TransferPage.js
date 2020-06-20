@@ -73,7 +73,10 @@ class TransferPage extends Component {
       
       let package_data = await PackagesSrc.get(package_id);
       let client_data = await ClientsSrc.getByClientId(this.state.client_id)
-      this.setState({ loading: false, package_data: package_data[0], client_data:client_data[0], total_a_pagar: package_data[0].total_a_pagar, date: package_data[0].ent_date });
+      this.setState({ loading: false, package_data: package_data[0],
+        client_data:client_data[0],
+        total_a_pagar: package_data[0].total_a_pagar,
+        date: package_data[0].ent_date }, _=>{ console.log(this.state)});
       
     } catch (e) {
       console.log(JSON.stringify(e))
@@ -91,6 +94,7 @@ class TransferPage extends Component {
     }
     
     console.log(params)
+    
     TransferSrc.transfer(params).then( d => {
       message.success('Actualizado')
       this.setState({package_data:null, client_data:null, package_id:null, client_id:null, total_a_pagar:null})
@@ -173,9 +177,8 @@ class TransferPage extends Component {
               >
                 <DatePicker
                   placeholder='Seleccione una Fecha'
-                  defaultValue={ date === '0000-00-00' ? null :  moment(date, dateFormat)} format={dateFormat}
                   onChange={value => this.handleChange('date', value)}
-      
+                  value={date === '0000-00-00' ? null :  moment(date, dateFormat)} format={dateFormat}
                   style={{ width: '100%'}}
                 />
               </FormItem>

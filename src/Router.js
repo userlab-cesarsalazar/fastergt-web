@@ -59,7 +59,7 @@ const routes = [
   { route: '/clients/create', component: ClientsAddForm, profiles: ['admin'] },
   { route: '/clients/profile', component: ClientProfileForm, profiles: ['admin', 'cliente', 'recepcionista'] },
   { route: '/clients/edit/:id', component: ClientEditForm, profiles: ['admin', 'cliente'] },
-  { route: '/clients/viewpackage/:id', component: ClientViewPackage, profiles: ['admin', 'cliente', 'recepcionista'] },
+  { route: '/clients/viewpackage/:id', component: ClientViewPackage, profiles: ['admin', 'cliente', 'recepcionista','warehouse'] },
   { route: '/clients/addpackage', component: ClientAddPackage, profiles: ['cliente'] },
   { route: '/packages/create', component: PackageAddForm, profiles: ['admin','warehouse'] },
   { route: '/packages/admincreate', component: PackageAdminAddForm, profiles: ['admin','warehouse'] },

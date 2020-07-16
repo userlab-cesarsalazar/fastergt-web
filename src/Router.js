@@ -54,7 +54,7 @@ const SubMenu = Menu.SubMenu
 const routes = [
   { route: '/dashboard', component: DashboardPage, profiles: ['admin'] },
   { route: '/reports', component: ReportsPage, profiles: ['admin'] },
-  { route: '/clients', component: ClientsPage, profiles: ['admin', 'recepcionista'] },
+  { route: '/clients', component: ClientsPage, profiles: ['admin', 'recepcionista','warehouse'] },
   { route: '/packages', component: PackagesPage, profiles: ['admin','warehouse'] },
   { route: '/clients/create', component: ClientsAddForm, profiles: ['admin'] },
   { route: '/clients/profile', component: ClientProfileForm, profiles: ['admin', 'cliente', 'recepcionista'] },

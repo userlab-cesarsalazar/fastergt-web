@@ -48,7 +48,7 @@ class ClientsPage extends Component {
   }
   
   componentDidMount() {
-    if(Cache.getItem('userApp').profile !== 'recepcionista'){
+    if(Cache.getItem('userApp').profile === 'admin'){
       this.setState({ loading: true });
       this.loadData();
     }
@@ -250,7 +250,7 @@ class ClientsPage extends Component {
 
         <div className={'table-action-bar'}>
           <h2>Clientes</h2>
-          {Cache.getItem('userApp').profile !== 'recepcionista' ?
+          {Cache.getItem('userApp').profile === 'admin'  ?
             <Button type='primary' onClick={this.onAdd}>Nuevo</Button>
             :
             ''

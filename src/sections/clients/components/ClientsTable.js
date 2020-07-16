@@ -85,7 +85,7 @@ class ClientsTable extends React.Component {
 
           <br/>
 
-          {(Cache.getItem('userApp').profile !== 'recepcionista') ? (
+          {(Cache.getItem('userApp').profile === 'admin') ? (
             <Col span={24} style={{ textAlign: 'center' }}>
               <Form.Item>
                 <Button

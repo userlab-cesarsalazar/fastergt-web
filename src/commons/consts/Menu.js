@@ -21,7 +21,7 @@ const menuOptions = [{
   icon: 'team',
   route: '/clients',
   possiblePermissions: [ 'read', 'add', 'edit', 'delete' ],
-  profilePermissions: ['admin','recepcionista']
+  profilePermissions: ['admin','recepcionista','warehouse']
 }, {
   name: 'PACKAGES',
   key: 'packages',

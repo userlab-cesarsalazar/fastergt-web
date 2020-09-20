@@ -211,7 +211,7 @@ class ClientsAddForm extends React.Component {
                     checked={this.state.entrega === "Entrega en Traestodo"}
                     onChange={this.onPreferencesChanged}
                     disabled={loading}
-                  >TraesTodo</Radio>
+                  >Rapidito</Radio>
                   <Radio
                     value="Entrega a Domicilio"
                     checked={this.state.entrega === "Entrega a Domicilio"}

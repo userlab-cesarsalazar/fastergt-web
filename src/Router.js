@@ -56,9 +56,9 @@ const routes = [
   { route: '/reports', component: ReportsPage, profiles: ['admin'] },
   { route: '/clients', component: ClientsPage, profiles: ['admin', 'recepcionista','warehouse'] },
   { route: '/packages', component: PackagesPage, profiles: ['admin','warehouse'] },
-  { route: '/clients/create', component: ClientsAddForm, profiles: ['admin'] },
+  { route: '/clients/create', component: ClientsAddForm, profiles: ['admin','recepcionista'] },
   { route: '/clients/profile', component: ClientProfileForm, profiles: ['admin', 'cliente', 'recepcionista'] },
-  { route: '/clients/edit/:id', component: ClientEditForm, profiles: ['admin', 'cliente'] },
+  { route: '/clients/edit/:id', component: ClientEditForm, profiles: ['admin', 'cliente','recepcionista'] },
   { route: '/clients/viewpackage/:id', component: ClientViewPackage, profiles: ['admin', 'cliente', 'recepcionista','warehouse'] },
   { route: '/clients/addpackage', component: ClientAddPackage, profiles: ['cliente'] },
   { route: '/packages/create', component: PackageAddForm, profiles: ['admin','warehouse'] },
@@ -256,7 +256,7 @@ class Router extends Component {
                 </div>
               </Content>
 
-              <Footer style={{ textAlign: 'center' }}>Powered by Userlab ©{this.state.year}</Footer>
+              <Footer style={{ textAlign: 'center' }}>Powered by Userlab ©{this.state.year} - V:{process.env.REACT_APP_VERSION}</Footer>
             </Layout>
           </Layout>
         ) : (
